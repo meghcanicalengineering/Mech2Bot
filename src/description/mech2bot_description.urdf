@@ -88,4 +88,6 @@
 
     <xacro:wheel prefix="drivewh1_l" x_reflect="-1" y_reflect="1" />
     <xacro:wheel prefix="drivewh1_r" x_reflect="-1" y_reflect="-1" />
+    <xacro:wheel prefix="drivewh1_l" x_reflect="1" y_reflect="-1" />
+    <xacro:wheel prefix="drivewh1_r" x_reflect="1" y_reflect="1" />
 </robot>
