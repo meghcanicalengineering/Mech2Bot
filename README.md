@@ -13,3 +13,9 @@ https://navigation.ros.org/setup_guides/urdf/setup_urdf.html
 - Gazebo(?)
 - slam_toolbox
 - rplidar
+
+## Current Status:
+**Physical System**
+Assembly, integration of tail
+**Coding**
+base_link works, get consistent odom data over /SensorMsgs/IMU and use slam_toolbox
