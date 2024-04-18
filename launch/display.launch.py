@@ -52,7 +52,7 @@ def generate_launch_description():
         joint_state_publisher_node,
         joint_state_publisher_gui_node,
         robot_state_publisher_node,
-        spawn_entity,
-        robot_localization_node,
+        #spawn_entity,
+        #robot_localization_node,
         rviz_node
     ])
