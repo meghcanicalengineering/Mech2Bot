@@ -10,9 +10,9 @@ https://navigation.ros.org/setup_guides/urdf/setup_urdf.html
 - Ubuntu 22.04 Jammy Jellyfish
 - ROS2 Humble Hawksbill
 - Rviz2
-- Gazebo(?)
 - slam_toolbox
 - rplidar
+- Nav2
 
 ## Current Status:  
 **Physical System:**  
