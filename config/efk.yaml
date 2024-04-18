@@ -1,0 +1,17 @@
+ekf_filter_node:
+    ros_parameters:
+        frequency: 30.0
+        two_d_mode: false
+        publish_acceleration: true
+        publish_tf: true
+        map_frame: map
+        odom_frame: imu
+        base_link_frame: base_link
+        world_frame: imu
+
+        imu0: demo/imu
+        imu0_config: [false, false, false,
+                      false,  false,  false,
+                      false, false, false,
+                      false, false, false,
+                      true, true, true]
