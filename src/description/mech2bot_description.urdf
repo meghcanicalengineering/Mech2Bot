@@ -101,13 +101,13 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="0.0508" length="0.055"/>
+                <cylinder radius="0.0484" length="0.051"/>
             </geometry>
         </collision>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="0.0508" length="0.055"/>
+                <cylinder radius="0.0484" length="0.051"/>
             </geometry>
         </visual>
     </link>
@@ -115,6 +115,6 @@
     <joint name="lidar_joint" type="fixed">
         <parent link="base_link"/>
         <child link="lidar_link"/>
-        <origin xyz="0 0 0.12" rpy="0 0 0"/>
+        <origin xyz="0 0 0.0572" rpy="0 0 0"/>
     </joint>
 </robot> 
