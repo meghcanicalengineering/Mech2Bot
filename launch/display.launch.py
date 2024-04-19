@@ -51,7 +51,7 @@ def generate_launch_description():
         executable='static_transform_publisher',
         name='lidar_tf_broadcaster',
         output='screen',
-        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'rplidar_link']  # Modify the arguments as needed
+        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'laser']  # Modify the arguments as needed
     )
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='gui', default_value='True',
