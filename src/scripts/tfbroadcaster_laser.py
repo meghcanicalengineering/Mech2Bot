@@ -13,7 +13,7 @@ def main():
     static_transformStamped = geometry_msgs.msg.TransformStamped()
     static_transformStamped.header.stamp = rospy.Time.now()
     static_transformStamped.header.frame_id = "base_link"
-    static_transformStamped.child_frame_id = "rplidar_link"
+    static_transformStamped.child_frame_id = "laser"
     static_transformStamped.transform.translation.x = 0.0
     static_transformStamped.transform.translation.y = 0.0
     static_transformStamped.transform.translation.z = 0.0
