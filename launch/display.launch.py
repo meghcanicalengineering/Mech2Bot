@@ -40,6 +40,12 @@ def generate_launch_description():
         output='screen',
         parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
+    rplidar_node = launch_ros.actions.Node(
+        package='rplidar_ros',
+        executable='rplidar_node',
+        name='rplidar_node',
+        parameters=[{'serial_port': '/dev/ttyUSB0'}]  # Adjust serial port as per your setup
+    )
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='gui', default_value='True',
                                             description='Flag to enable joint_state_publisher_gui'),
@@ -52,7 +58,7 @@ def generate_launch_description():
         joint_state_publisher_node,
         joint_state_publisher_gui_node,
         robot_state_publisher_node,
-        #spawn_entity,
-        #robot_localization_node,
+        rplidar_node,
+        robot_localization_node,
         rviz_node
     ])
