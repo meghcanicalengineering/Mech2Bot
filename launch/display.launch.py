@@ -46,6 +46,13 @@ def generate_launch_description():
         name='rplidar_node',
         parameters=[{'serial_port': '/dev/ttyUSB0'}]  # Adjust serial port as per your setup
     )
+    tfbroadcaster_laser = launch_ros.actions.Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='lidar_tf_broadcaster',
+        output='screen',
+        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'rplidar_link']  # Modify the arguments as needed
+    )
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='gui', default_value='True',
                                             description='Flag to enable joint_state_publisher_gui'),
@@ -55,10 +62,14 @@ def generate_launch_description():
                                             description='Absolute path to rviz config file'),
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
                                             description='Flag to enable use_sim_time'),
+        launch.actions.DeclareLaunchArgument(name='rplidar_serial_port', default_value='/dev/ttyUSB0',
+                                            description='Serial port for the RPLidar'),
+        joint_state_publisher_node,
         joint_state_publisher_node,
         joint_state_publisher_gui_node,
         robot_state_publisher_node,
         rplidar_node,
-        robot_localization_node,
-        rviz_node
+        #robot_localization_node,
+        rviz_node,
+        tfbroadcaster_laser,
     ])
