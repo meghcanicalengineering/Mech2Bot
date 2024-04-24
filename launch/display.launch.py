@@ -53,6 +53,14 @@ def generate_launch_description():
         output='screen',
         arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'laser']  # Modify the arguments as needed
     )
+    tfbroadcaster_imu = launch_ros.actions.Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='imu_tf_broadcaster',
+        output='screen',
+        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'imu']  # Modify the arguments as needed
+    )
+    
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='gui', default_value='True',
                                             description='Flag to enable joint_state_publisher_gui'),
