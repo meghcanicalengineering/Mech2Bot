@@ -18,4 +18,4 @@ https://navigation.ros.org/setup_guides/urdf/setup_urdf.html
 **Physical System:**  
 Assembly, integration of tail  
 **Coding:**  
-base_link works, get consistent odom data over /SensorMsgs/IMU and use slam_toolbox  
+base_link, lidar, imu works, get consistent odom data and use slam_toolbox  
