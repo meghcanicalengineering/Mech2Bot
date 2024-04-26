@@ -1,0 +1,24 @@
+controller_manager:
+  ros_parameters: 
+    update_rate: 30
+    use_sim_time: true
+
+    diff_cont:
+      type: diff_drive_controller/DiffDriveController
+
+    joint_broad:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+diff_cont:
+  ros_parameters: 
+
+    publish_rate: 50.0
+
+    base_frame_id: base_link
+    left_wheel_names: ['drivewh1_l', 'drivewh2_l']
+    right_wheel_names: ['drivewheel1_r', 'drivewh2_r']
+    wheel_seperation: 0.27 #distance between back wheels center to center
+    #distance between front and back: 0.24
+
+    use_stamped_vel: false
+    wheels_per_side: 2
