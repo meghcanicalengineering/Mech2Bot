@@ -5,6 +5,8 @@ https://navigation.ros.org/setup_guides/urdf/setup_urdf.html
 **Hardware**
 - A1M8 Slamtec LiDAR 
 - Raspberry Pi 4 Model B
+- MPU6050 IMU
+
 
 **Software**
 - Ubuntu 22.04 Jammy Jellyfish
